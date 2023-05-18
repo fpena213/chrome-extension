@@ -11,7 +11,7 @@
 // document.appendChild(fakePic);
 
 
-const picArry = ['https://i.imgflip.com/7m791m.jpg', 'https://i.imgflip.com/7m793c.jpg', 'https://i.imgflip.com/7m795r.jpg','https://i.imgflip.com/7m793k.jpg', 'https://i.imgflip.com/7m797n.jpg', 'https://i.imgflip.com/7m7990.jpg','https://i.imgflip.com/7m799i.jpg', 'https://i.imgflip.com/7m79d9.jpg', 'https://i.imgflip.com/7m79ga.jpg', 'https://i.imgflip.com/7m79fm.jpg','https://i.imgflip.com/7m79no.jpg']
+const picArry = ['https://i.imgflip.com/7m791m.jpg', 'https://i.imgflip.com/7m793c.jpg', 'https://i.imgflip.com/7m795r.jpg','https://i.imgflip.com/7m793k.jpg', 'https://i.imgflip.com/7m797n.jpg', 'https://i.imgflip.com/7m7990.jpg','https://i.imgflip.com/7m799i.jpg', 'https://i.imgflip.com/7m79d9.jpg', 'https://i.imgflip.com/7m79ga.jpg', 'https://i.imgflip.com/7m79fm.jpg','https://i.imgflip.com/7m79no.jpg', 'https://i.imgflip.com/7m9hme.jpg', 'https://i.imgflip.com/7m9iht.jpg', 'https://i.imgflip.com/7m9j6u.jpg', 'https://i.imgflip.com/7m9kmy.jpg']
 
 let randomNum = Math.floor(Math.random() * picArry.length);
 const codeBox = document.querySelector('#qd-content');
@@ -27,6 +27,22 @@ document.addEventListener('click', function() {
     randomNum = Math.floor(Math.random() * picArry.length);
     pic.setAttribute('src',`${picArry[randomNum]}`);
     codeBox.replaceWith(pic);
+    const allDivs = document.querySelectorAll('div');
+    const setBg = () => {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    allDivs.forEach(div => {
+      div.style.backgroundColor = '#' + randomColor;
+    });
+    };
+    setBg();
+
 });
-//add more to array
-//add logo
+
+
+// const buttons = document.querySelector('svg');
+// buttons.replaceWith(pic);
+// buttons.addEventListener('click', function() {
+//   randomNum = Math.floor(Math.random() * picArry.length);
+//   pic.setAttribute('src',`${picArry[randomNum]}`);
+//   codeBox.replaceWith(pic);
+// });
