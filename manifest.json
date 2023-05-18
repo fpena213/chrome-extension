@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://csx.codesmith.io/units/functions-execution-context/challenge-add-s/*"
+        "https://leetcode.com/problems/*"
       ],
       "js": [
         "main.js"
