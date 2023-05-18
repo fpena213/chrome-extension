@@ -2,7 +2,12 @@
   "manifest_version": 3,
   "name": "Codesmith Random Meme Generator",
   "version": "1.0",
-  "description": "Memify Your Page Franki Made This Description",
+  "description": "Why LeetCode when you can MemeCode",
+  "icons": {
+    "16": "Doge-meme-16.png",
+    "48": "Doge-meme-48.png",
+    "128": "Doge-meme-128.png"
+  },
   "content_scripts": [
     {
       "matches": [
